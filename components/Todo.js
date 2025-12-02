@@ -24,11 +24,12 @@ class Todo {
   }
 
   _generateDate() {
-    const todoDate = this._todoElement.querySelector(".todo__date");
+    const todoDateEl = this._todoElement.querySelector(".todo__date"); // Renamed
     if (this._data.date) {
       const date = new Date(this._data.date);
       if (!isNaN(date)) {
-        todoDate.textContent = `Due: ${date.toLocaleString("en-US", {
+        // Update usage here too
+        todoDateEl.textContent = `Due: ${date.toLocaleString("en-US", {
           year: "numeric",
           month: "short",
           day: "numeric",
