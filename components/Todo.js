@@ -4,7 +4,7 @@ class Todo {
     this._templateElement = document.querySelector(selector);
   }
 
-  _setEventListener() {
+  _setEventListeners() {
     this._deleteBtn.addEventListener("click", () => {
       this._todoElement.remove();
     });
